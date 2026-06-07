@@ -6,19 +6,17 @@ import path from 'path';
 async function main() {
   const fileName = 'common.json';
   const headersDir = path.join(os.homedir(), '.headers');
-  const headers = JSON.parse(JSON.stringify(
+  const headersJSON = JSON.stringify(
     Object.fromEntries(
       process.argv
         .filter((_, index) => process.argv[index - 1] === '-H')
         .map((value) => value.split(': '))
-    )
-  ));
-  console.log(headers);
-  fs.mkdirSync(headersDir, { recursive: true });
-  fs.writeFileSync(
-    path.join(headersDir, fileName),
-    JSON.stringify(headers, null, 2),
+    ), null, 2
   );
+  console.log('-- Request Headers --');
+  console.log(headersJSON);
+  fs.mkdirSync(headersDir, { recursive: true });
+  fs.writeFileSync(path.join(headersDir, fileName), headersJSON);
 }
 
 main();
