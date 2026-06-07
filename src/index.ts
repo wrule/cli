@@ -12,7 +12,7 @@ async function main() {
   const body = process.argv[4];
   const res = await axios.request({
     method, url,
-    params: body && JSON.parse(body),
+    data: body && JSON.parse(body),
     headers: JSON.parse(fs.readFileSync(headersDir, 'utf8')),
   });
   console.log('-- Response Code --');
