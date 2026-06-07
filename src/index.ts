@@ -17,6 +17,7 @@ async function main() {
   });
   console.log('-- Response Code --');
   console.log(res.status);
+  console.log();
   console.log('-- Response Body --')
   console.log(JSON.stringify(res.data, null, 2));
 }
