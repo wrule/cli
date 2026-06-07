@@ -4,9 +4,12 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "bin": {
-    "req": "./dist/index.js",
-    "scurl": "./dist/scurl.js"
+    "req": "dist/index.js",
+    "scurl": "dist/scurl.js"
   },
   "exports": {
     ".": {
@@ -22,7 +25,13 @@
     "watch": "tsx watch ./src/index.ts",
     "prepack": "npm run build"
   },
-  "repository": "https://github.com/wrule/cli.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrule/cli.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "24",
