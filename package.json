@@ -1,5 +1,5 @@
 {
-  "name": "cli",
+  "name": "@wrule/req",
   "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
