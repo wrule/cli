@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 async function main() {
-  console.log('req');
+  console.log('save-header');
 }
 
 main();

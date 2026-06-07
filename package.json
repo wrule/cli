@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "abcd": "./dist/index.js"
+    "req": "./dist/index.js",
+    "save-header": "./dist/save-header.js"
   },
   "exports": {
     ".": {
